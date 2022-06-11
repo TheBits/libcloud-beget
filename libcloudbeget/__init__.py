@@ -1,7 +1,6 @@
 from libcloud.common.base import ConnectionUserAndKey, JsonResponse
 from libcloud.common.types import InvalidCredsError
 from libcloud.dns.base import DNSDriver, Zone
-from libcloud.utils.py3 import httplib
 
 
 class BegetResponse(JsonResponse):

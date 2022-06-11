@@ -7,10 +7,8 @@ from typing import Tuple
 import pytest
 import vcr
 from libcloud.common.types import InvalidCredsError
-from libcloud.compute.base import Node
-from libcloud.compute.types import NodeState
 
-from libcloudbeget import BegetConnection, BegetDNSDriver
+from libcloudbeget import BegetDNSDriver
 
 
 @pytest.fixture()
@@ -65,8 +63,8 @@ def test_dns_list_zones(credentials):
 
 @vcr_record
 def test_logon_invalid_creds():
+    beget = BegetDNSDriver(key="123", user_id="abc")
     with pytest.raises(InvalidCredsError):
-        beget = BegetDNSDriver(key="123", user_id="abc")
         beget.iterate_zones()
 
 
