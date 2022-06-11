@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Connection:
+      - keep-alive
+      Host:
+      - api.beget.com
+      User-Agent:
+      - 'libcloud/3.6.0 (Beget) '
+    method: GET
+    uri: https://api.beget.com/api/domain/getList?output_format=json
+  response:
+    body:
+      string: '{"status":"success","answer":{"status":"success","result":[]}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sat, 11 Jun 2022 05:40:27 GMT
+      Keep-Alive:
+      - timeout=30
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Server:
+      - Apache/2.4.12
+      content-length:
+      - '62'
+    status:
+      code: 200
+      message: OK
+version: 1
