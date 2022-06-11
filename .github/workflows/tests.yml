@@ -6,6 +6,7 @@ on:
     branches: [main]
 
 env:
+  DRIVER_PASSWORD: github-actions
   DRIVER_KEY: github-actions
   DRIVER_USER_ID: github-actions
   TOX_PARALLEL_NO_SPINNER: 1
