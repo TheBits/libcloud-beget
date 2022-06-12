@@ -55,7 +55,7 @@ def vcr_record(f):
 
 
 @vcr_record
-def test_dns_list_zones(credentials):
+def test_dns_list_zones_empty(credentials):
     beget = BegetDNSDriver(credentials.user_id, credentials.key)
     zones = beget.iterate_zones()
     assert not zones
@@ -69,7 +69,14 @@ def test_logon_invalid_creds():
 
 
 @vcr_record
-def test_dns_iterate_zones(credentials):
+def test_dns_iterate_zones_empty(credentials):
     beget = BegetDNSDriver(credentials.user_id, credentials.key)
     zones = beget.iterate_zones()
     assert not zones
+
+
+@vcr_record
+def test_dns_list_zones_one(credentials):
+    beget = BegetDNSDriver(credentials.user_id, credentials.key)
+    zones = beget.iterate_zones()
+    assert len(zones) == 1
