@@ -1,0 +1,43 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Connection:
+      - keep-alive
+      Host:
+      - api.beget.com
+      User-Agent:
+      - 'libcloud/3.6.0 (Beget) '
+    method: GET
+    uri: https://api.beget.com/api/domain/getList?output_format=json
+  response:
+    body:
+      string: '{"status":"success","answer":{"status":"success","result":[{"id":9645840,"fqdn":"example2.com","date_add":"2022-06-12
+        08:55:33","auto_renew":false,"date_register":null,"date_expire":null,"can_renew":false,"registrar":null,"registrar_status":null,"register_order_status":null,"register_order_comment":"","renew_order_status":null,"is_under_control":0}]}}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Sun, 12 Jun 2022 06:01:31 GMT
+      Keep-Alive:
+      - timeout=30
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Server:
+      - Apache/2.4.12
+      content-length:
+      - '353'
+    status:
+      code: 200
+      message: OK
+version: 1
